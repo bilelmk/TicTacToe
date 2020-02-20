@@ -39,10 +39,13 @@ export class ImbattablePage {
   }
 
   turnClick(id){
-    this.turn(id, this.huPlayer)
-    if (!this.checkTie()) {
-      this.turn(this.bestSpot(), this.aiPlayer);
+    if(typeof this.origBoard[id] == 'number'){
+      this.turn(id, this.huPlayer)
+      if (!this.checkTie()) {
+        this.turn(this.bestSpot(), this.aiPlayer);
+      }
     }
+
   }
 
   turn(squareId, player) {
@@ -93,10 +96,8 @@ export class ImbattablePage {
   }
 
   checkTie(){
-    if (this.emptySquares().length == 0) {
-      return true ;
-    }
-    return false;
+    return this.emptySquares().length == 0;
+
   }
 
   bestSpot(){

@@ -14,7 +14,7 @@
 <ion-content>
   <table>
     <tr>
-      <td  class="cell" [ngClass]="getClass(0)" (click)="turnClick(0)">{{origBoard[0] == 0 ? '' : origBoard[0] }}</td>
+      <td  class="cell" [ngClass]="getClass(0) " (click)="turnClick(0)">{{origBoard[0] == 0 ? '' : origBoard[0] }}</td>
       <td class="cell" [ngClass]="getClass(1)" (click)="turnClick(1)">{{origBoard[1] == 1 ? '' : origBoard[1]}}</td>
       <td class="cell" [ngClass]="getClass(2)" (click)="turnClick(2)">{{origBoard[2] == 2 ? '' : origBoard[2]}}</td>
     </tr>
